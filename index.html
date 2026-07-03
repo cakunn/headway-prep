@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alice Wong — Principal PM Application | Headway</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f3f8f5;
+      --panel: #ffffff;
+      --ink: #17352a;
+      --text: #1d1f20;
+      --muted: #4f5956;
+      --green: #1a9b67;
+      --green-dark: #0f7d52;
+      --mint: #eaf6ef;
+      --border: #cfe0d8;
+      --shadow: 0 4px 24px rgba(23, 53, 42, 0.06);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(180deg, #edf6f2 0%, var(--bg) 40%, #f7fbf8 100%);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 17px;
+      min-height: 100vh;
+    }
+
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 32px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px 999px 0 0;
+      background: var(--green);
+    }
+
+    .brand-name {
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--green);
+      letter-spacing: -0.02em;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--green);
+      background: var(--mint);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 40px;
+    }
+
+    .subtitle a {
+      color: var(--green-dark);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .subtitle a:hover {
+      text-decoration: underline;
+    }
+
+    .letter {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px 44px;
+      box-shadow: var(--shadow);
+    }
+
+    .letter p {
+      margin-bottom: 1.25em;
+    }
+
+    .letter p:last-child {
+      margin-bottom: 0;
+    }
+
+    .work-cards {
+      display: grid;
+      gap: 16px;
+      margin: 32px 0;
+    }
+
+    .work-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--mint);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    .work-card:hover {
+      border-color: var(--green);
+      box-shadow: 0 4px 16px rgba(26, 155, 103, 0.12);
+    }
+
+    .work-card-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 6px;
+    }
+
+    .work-card-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .work-card-desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .work-card-arrow {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--green-dark);
+    }
+
+    .signature {
+      margin-top: 2em;
+    }
+
+    .signature-name {
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="https://headway.co" target="_blank" rel="noopener">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <span class="brand-name">Headway</span>
+    </a>
+  </header>
+
+  <div class="container">
+    <span class="badge">Principal Product Manager</span>
+    <h1>Alice Wong</h1>
+    <p class="subtitle">
+      <a href="mailto:alicesw@gmail.com">alicesw@gmail.com</a> ·
+      <a href="https://www.linkedin.com/in/aliceishere/" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+
+    <article class="letter">
+      <p>Dear Headway hiring team,</p>
+
+      <p>
+        I'm applying for the Principal PM role because Headway's mission — making mental healthcare accessible and affordable for everyone — is the kind of problem I want to spend the next chapter of my career on. One in four Americans has a treatable condition; most can't afford care. You've already solved the hardest infrastructure problem. What draws me now is the product layer on top: helping a million patients a month actually get into care, stay in care, and feel better. That's individual impact at a scale few companies can offer, and it's exactly where I do my best work.
+      </p>
+
+      <p>
+        My career has been defined by that tension — deeply personal user moments, delivered through platforms that reach millions. At Coursera, I launched the Gen AI Coach from zero to 2M+ learners and 40M+ interactions, with disproportionate adoption by underserved groups: 11% more women, 40% more career starters, 10% more non-degreed learners. I didn't optimize for aggregate engagement; I designed for the learner sitting alone at 11pm, stuck on a concept, needing someone who gets it. The platform scaled because the individual experience was right. Before that, I built AI translation infrastructure that made 4,600+ courses available in 21 languages — 1.5M enrollments from learners who previously had no path in. At WEX, I lead enterprise innovation with Board-level visibility, founding an AI-native incubator and coaching six pilot teams on a new way of building. Across every role, the pattern is the same: find the human job to be done, build something that feels personal, then platform it so the impact compounds.
+      </p>
+
+      <p>
+        That's why I didn't wait for an interview to start thinking about Headway's patient experience. I walked the current onboarding journey end to end, documented every step, and mapped the emotional arc from landing page to first free consultation booking. I wanted to understand not just where users drop off, but <em>why</em> — the eligibility ambiguity, the identity fatigue, the choice anxiety when faced with dozens of therapist profiles. Then I went further: I sketched a product vision for where the patient journey could go, grounded in a simple north star — therapy is about positive state change, moving patients from emotionally closed to emotionally open.
+      </p>
+
+      <div class="work-cards">
+        <a class="work-card" href="headway-user-journey-analysis.html">
+          <div class="work-card-label">Current State Analysis</div>
+          <div class="work-card-title">Patient Onboarding Journey: Landing → First Booking</div>
+          <p class="work-card-desc">
+            Step-by-step walkthrough of today's flow with psychology-informed analysis of intent, emotion, and drop-off risk at each stage — including the highest-friction moment at therapist selection.
+          </p>
+          <span class="work-card-arrow">View journey analysis →</span>
+        </a>
+        <a class="work-card" href="patient-journey-artifact.html">
+          <div class="work-card-label">Product Vision</div>
+          <div class="work-card-title">Reimagining the Patient Journey: Emotional Closed → Open</div>
+          <p class="work-card-desc">
+            A strategic framework across Discovery, Trial, and Commitment — with voice-led matching, sustained between-session engagement, and an interactive prototype of a reimagined discovery flow.
+          </p>
+          <span class="work-card-arrow">View product vision →</span>
+        </a>
+      </div>
+
+      <p>
+        I'm not presenting these as finished strategy — they're how I think, and how I'd approach the ambiguity this role demands. The Principal PM job description says the best candidates find the right problem and convince the organization to solve it. That's what I did with Coach at Coursera (platforming it into seven apps across five teams), with translations (reframing localization as an equity bet, not a cost center), and with what I've started here: naming the real job — choice confidence, not profile browsing; state change, not habit streaks — and working backward from the patient's emotional arc.
+      </p>
+
+      <p>
+        I'm AI-fluent in the way this role requires — not as a side project, but as core infrastructure. I built Coach's SDK, eval framework, and LLM integration library (cutting dev cycle time 60% and LLM costs 95%). At WEX, I'm modeling an AI-native discovery and delivery workflow for the entire org. I have a point of view on where AI creates real leverage in healthcare: not replacing therapists, but extending the trust they build — between-session continuity, scheduling coordination, and the kind of personalized navigation that helps a million referrals actually become a million patients in care.
+      </p>
+
+      <p>
+        I'd welcome the chance to bring this builder mindset to Headway's Patient, Platform, or cross-cutting product areas. I'm especially drawn to the problems you've named: AI-powered matching that builds choice confidence, care navigation that keeps patients in treatment, and the platform foundations that let all of this scale reliably. I've shaped org-level strategy, influenced executives without formal authority, and leveled up PMs through the quality of my own work — and I'm looking for a mission where that craft matters.
+      </p>
+
+      <p>
+        For reference, <strong>Damon Petite</strong> — who recently joined Headway as Director of Provider Marketing — and I worked together at Coursera. He can speak to how I operate cross-functionally, how I think about go-to-market alongside product, and the caliber of work I bring to teams tackling hard problems.
+      </p>
+
+      <p>
+        Thank you for considering my application. I'd love to discuss how I can help Headway change mental healthcare for the better.
+      </p>
+
+      <div class="signature">
+        <p class="signature-name">Alice Wong</p>
+      </div>
+    </article>
+  </div>
+
+</body>
+</html>
