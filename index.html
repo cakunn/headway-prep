@@ -136,16 +136,18 @@
       display: block;
       text-decoration: none;
       color: inherit;
+      cursor: pointer;
       background: var(--mint);
-      border: 1px solid var(--border);
+      border: 2px solid var(--border);
       border-radius: 12px;
       padding: 20px 24px;
-      transition: border-color 0.15s, box-shadow 0.15s;
+      transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
     }
 
     .work-card:hover {
       border-color: var(--green);
-      box-shadow: 0 4px 16px rgba(26, 155, 103, 0.12);
+      box-shadow: 0 6px 20px rgba(26, 155, 103, 0.18);
+      transform: translateY(-2px);
     }
 
     .work-card-label {
@@ -172,11 +174,46 @@
     }
 
     .work-card-arrow {
-      display: inline-block;
-      margin-top: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 14px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      background: var(--green);
+      padding: 10px 18px;
+      border-radius: 999px;
+      box-shadow: 0 2px 8px rgba(26, 155, 103, 0.25);
+      transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+    }
+
+    .work-card:hover .work-card-arrow {
+      background: var(--green-dark);
+      transform: translateX(2px);
+      box-shadow: 0 4px 12px rgba(26, 155, 103, 0.35);
+    }
+
+    .vision-figure {
+      margin: 24px 0 8px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .vision-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .vision-figure figcaption {
       font-size: 13px;
-      font-weight: 600;
-      color: var(--green-dark);
+      color: var(--muted);
+      padding: 10px 14px;
+      background: var(--mint);
+      border-top: 1px solid var(--border);
     }
 
     .signature {
@@ -221,6 +258,11 @@
       <p>
         That's why I didn't wait for an interview to start thinking about Headway's patient experience. I walked the current onboarding journey end to end, documented every step, and mapped the emotional arc from landing page to first free consultation booking. I wanted to understand not just where users drop off, but <em>why</em> — the eligibility ambiguity, the identity fatigue, the choice anxiety when faced with dozens of therapist profiles. Then I went further: I sketched a product vision for where the patient journey could go, grounded in a simple north star — therapy is about positive state change, moving patients from emotionally closed to emotionally open.
       </p>
+
+      <figure class="vision-figure">
+        <img src="IMG_4453.jpeg" alt="Handwritten product vision sketch — discovery, trial, and commitment stages with engagement wave">
+        <figcaption>Original product vision sketch — emotional closed → emotional open</figcaption>
+      </figure>
 
       <div class="work-cards">
         <a class="work-card" href="headway-user-journey-analysis.html">

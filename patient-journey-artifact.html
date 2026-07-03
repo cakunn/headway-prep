@@ -190,21 +190,38 @@
     }
 
     .hero-meta {
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-      margin-top: 32px;
-      font-size: 14px;
-      color: var(--muted);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 36px;
     }
 
-    .hero-meta span {
-      display: flex;
-      align-items: center;
-      gap: 6px;
+    .hero-meta-item {
+      background: linear-gradient(135deg, #ffffff 0%, var(--mint) 100%);
+      border: 2px solid var(--green);
+      border-radius: var(--radius-sm);
+      padding: 20px 22px;
+      box-shadow: 0 6px 20px rgba(26, 155, 103, 0.12);
     }
 
-    .hero-meta strong { color: var(--ink); }
+    .hero-meta-label {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+
+    .hero-meta-value {
+      display: block;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+    }
 
     /* ── Cards & panels ── */
     .card {
@@ -1322,8 +1339,14 @@
         and sustaining trust between sessions.
       </p>
       <div class="hero-meta">
-        <span><strong>North star question:</strong> How does therapy change you?</span>
-        <span><strong>Ultimate outcome:</strong> Feel better / improved state</span>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">North star question</span>
+          <span class="hero-meta-value">How does therapy change you?</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Ultimate outcome</span>
+          <span class="hero-meta-value">Feel better / improved state</span>
+        </div>
       </div>
     </header>
 
