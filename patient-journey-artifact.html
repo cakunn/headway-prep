@@ -356,10 +356,23 @@
 
     .figure img {
       width: 100%;
+      height: auto;
       border-radius: var(--radius);
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
       display: block;
+    }
+
+    .figure-landscape {
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .figure-landscape img {
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
+      background: #101412;
     }
 
     .figure figcaption {
@@ -1370,8 +1383,8 @@
         </div>
       </div>
 
-      <figure class="figure">
-        <img src="IMG_4454.jpeg?v=2" alt="Handwritten notes: HMW get a patient from lower state to higher state">
+      <figure class="figure figure-landscape">
+        <img src="IMG_4454.jpeg?v=3" alt="Handwritten notes: HMW get a patient from lower state to higher state">
         <figcaption>Original strategy notes — emotional closed → emotional open</figcaption>
       </figure>
     </section>
@@ -1461,10 +1474,6 @@
 
       <div class="outcome-pill">→ Feel Better / Improved State</div>
 
-      <figure class="figure">
-        <img src="IMG_4453.jpeg?v=2" width="4032" height="3024" alt="Handwritten journey chart with discovery, trial, commitment stages and engagement wave">
-        <figcaption>Original journey framework — sustained engagement through bite-sized prompts</figcaption>
-      </figure>
     </section>
 
     <!-- STRATEGY -->
@@ -1609,8 +1618,8 @@
       <h2>LLM-Powered Continuity</h2>
       <p class="lead">The LLM enables between-session presence and scheduling — it's not the product, it's the infrastructure for sustained trust.</p>
 
-      <figure class="figure" style="max-width: 520px;">
-        <img src="IMG_4455.jpeg?v=2" alt="Handwritten notes on LLM recaps and calendar coordination">
+      <figure class="figure figure-landscape">
+        <img src="IMG_4455.jpeg?v=3" alt="Handwritten notes on LLM recaps and calendar coordination">
         <figcaption>Original notes — LLM recaps and scheduling logic</figcaption>
       </figure>
 
